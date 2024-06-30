@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>SCAN QR CODE</title>
+  </head>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='qr_detect.js') }}"></script>
+  <style>
+      body{
+	background: black;
+	color: white;
+	padding:1%;
+	text-align: center;
+}
+  </style>
+
+  <body>
+    <h1>Hãy quét mã QR trên CCCD</h1>
+   <h3><img src="{{ url_for('video_feed2') }}" width="70%" height="80%"></h3>
+    <hr>
+  </body>
+</html>

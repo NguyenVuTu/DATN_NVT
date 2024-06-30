@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Room Pile</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        img {
+        display: block;
+        border-radius: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 300px;
+}
+block{
+      flex-wrap: nowrap;
+      }
+      input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+.info {
+  background-color: #e7f3fe;
+  border-left: 6px solid #2196F3;
+}
+p
+{
+    font-size: 20px;
+    font-weight: bold;
+}
+.info {
+  background-color: gray;
+  border-left: 6px solid #2196F3;
+}
+    </style>
+</head>
+<body>
+    <div class ="block">
+    <h1 align="center">Please pay the remaining amount</h1>
+    <br>
+        <img class="img" src="/static/hotel_room/momo.jpg"  id ="momo">
+        <div  align="center">
+
+            <p>Length of Stay: {{leng_stay}}</p>
+            <p>Remaining Amount: {{money}} VND</p>
+            <div class="info">
+            <p><strong>Info!</strong> If you've paid, click the button below</p>
+            <form action="/phong_cho" method="POST" >
+                <input style="display:none" type ="text" id="request" name = "piled_request" value = "YES">
+                <input type="submit" value="Submit" style="width:25%;">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

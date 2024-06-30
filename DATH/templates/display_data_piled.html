@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='display_data_pile.js') }}"></script>
+<head>
+
+    <style>
+    /* Remove the default padding and
+           margin of all HTML tags */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Implementation of linear-gradient property */
+        #lin_grad {
+
+            /* Set the height of the div to
+               the entire screen */
+            height: 150vh;
+
+            /* linear-gradient syntax */
+            background: linear-gradient(106.5deg, rgba(255, 215, 185, 0.91) 23%, rgba(223, 159, 247, 0.8) 93%);
+    th,td {
+  height: 70px;
+}
+p {
+    font-size: 30px;
+  font-family: "Times New Roman", Times, serif;
+  color: white;
+}
+h1
+.nowrap {
+  white-space: nowrap ;
+}
+span{
+    margin-left: 160px;
+    font-size: 30px;
+  font-family: "Times New Roman", Times, serif;
+  color:black;
+}
+div.border
+{
+   background-color: lightgrey;
+  width: 1000px;
+  border: 15px solid green;
+  padding: 50px;
+  margin: auto;
+  border: 2px solid black;
+  border-radius: 12px;
+  padding: 5px;
+}
+label{
+margin-left: 160px;
+font-size: 30px;
+}
+input {
+    font-family: "Times New Roman", Times, serif;
+    width: 75%;
+    height: 30px;
+    font-size: 20px;
+    margin-left: 175px;
+    margin-right: 500px;
+}
+body {
+  background-color: #444444;
+}
+label
+{
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+}
+h1, h3
+{
+    color:black;
+}
+.info {
+  background-color: gray;
+  border-left: 6px solid #2196F3;
+}
+div.input
+{
+    align:center;
+}
+</style>
+<meta charset="UTF-8">
+<title>Thông tin khách hàng</title>
+</head>
+<body>
+<div id = "lin_grad">
+    <div class = "border">
+    <h1 align="center">THÔNG TIN KHÁCH HÀNG</h1><br>
+<form action="/final_payment" method="POST" >
+    <label for="cccd">CCCD: </label>
+        <input type="text" id="cccd" name="cccd" value = "{{cccd}}" align="center"><br><br>
+
+            <label for="fname">Full Name: </label>
+            <input type="text" id="fname" name="fname" value = "{{name}}" style="margin: center"><br><br>
+
+            <label>Date of Birth: </label>
+            <input type="text" id="birth" name="birth" value = "{{birth}}"><br><br>
+
+            <label>Gender: </label>
+            <input type="text" id="gender" name="gender" value = "{{gender}}"><br><br>
+    <label>Phone Number: </label>
+  <input type="text" id="std" name="std" value="{{phone}}"><br><br>
+    <label>Gmail: </label>
+  <input type="text" id="email" name="email" value="{{email}}"><br><br>
+                  <label>Room ID: </label>
+            <input type="text" id="room_id" name="room_id" value = "{{room_id}}"><br><br>
+
+            <label>Check-in Date: </label>
+            <input type="text" id="start_day" name="start_day" value = "{{start_day}}"><br><br>
+
+            <label>Length of Stay: </label>
+            <input type="text" id="leng_stay" name="leng_stay" value = "{{leng_stay}}"><br><br>
+
+            <label>Check-out Date: </label>
+            <input type="text" id="end_day" name="end_day" value = "{{end_day}}"><br><br>
+
+
+    <div class="info">
+              <p><strong>Info!</strong> Please check your citizen identification card, your room id, check-in day before payment</p>
+                </div>
+    <br>
+    <div align="center">
+     <input style="font-size:20px" type="submit" value="Submit">
+    </div>
+    <br>
+</form>
+        </div>
+    </div>
+</body>
+</html>

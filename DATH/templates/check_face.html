@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>SCAN QR CODE</title>
+  </head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='check_face.js') }}"></script>
+  <style>
+      body{
+	background: black;
+	color: white;
+	padding:1%;
+	text-align: center;
+}
+  </style>
+  <body>
+    <h1>Hãy quét chân dung trên CCCD</h1>
+   <h3><img src="{{ url_for('video_feed3') }}" width="70%" height="80%"></h3>
+    <hr>
+  </body>
+</html>

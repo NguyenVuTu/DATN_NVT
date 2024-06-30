@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='admin.js') }}"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Trang quản lý</title>
+</head>
+<style>
+    html, body {
+      display: flex;
+      justify-content: center;
+      margin:0;
+      padding:0;
+      font-family: Serif;
+      height: 100%;
+      width: 100%;
+      }
+table {
+  border: 3px solid black;
+  text-align: center;
+  padding: 25px;
+
+}
+th, td
+{
+    border: 3px solid black;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+p{
+    color: red;
+    }
+.section-top{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("/static/hotel_room/admin.jpg");
+    }
+        .content{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-transform: uppercase;
+        text-align:center;
+    }
+</style>
+<body>
+<div class ="section-top">
+    <div class = "content">
+<div align="center" style="margin-top:100px;font-size: 20px;">
+<table>
+  <tr>
+    <th>STT</th>
+    <th>CCCD</th>
+    <th style="">Custom name</th>
+      <th>ROOM</th>
+      <th>Check-in day</th>
+      <th>Check-out day</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>
+              <p  id="room1_cccd"></p>
+      </td>
+    <td>
+        <p  id="room1_name"></p>
+
+        </td>
+      <td>
+        <p id="room1_id"></p>
+        </td>
+    <td>
+        <p id="room1_check_in"></p>
+    </td>
+
+      <td>
+        <p id="room1_check_out"></p>
+    </td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>
+        <p id="room2_cccd">
+
+        </p>
+    </td>
+    <td>
+        <p  id="room2_name"></p>
+    </td>
+      <td>
+        <p  id="room2_id"></p>
+        </td>
+
+      <td>
+        <p id="room2_check_in"></p>
+    </td>
+
+      <td>
+        <p id="room2_check_out"></p>
+    </td>
+  </tr>
+</table>
+</div>
+<p style="display:none" id ='room'></p>
+<p style="display:none" id ='time'></p>
+<p style="display:none" id = 'verify'></p>
+<p style="display:none" id = 'final_verify'></p>
+</div>
+</div>
+</body>
+</html>

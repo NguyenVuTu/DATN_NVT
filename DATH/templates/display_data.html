@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='display_data.js') }}"></script>
+<head>
+
+    <style>
+    /* Remove the default padding and
+           margin of all HTML tags */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Implementation of linear-gradient property */
+        #lin_grad {
+
+            /* Set the height of the div to
+               the entire screen */
+            height: 100vh;
+
+            /* linear-gradient syntax */
+            background-image: linear-gradient(lightblue, darkblue);
+    th,td {
+  height: 70px;
+}
+p {
+    font-size: 30px;
+  font-family: "Times New Roman", Times, serif;
+  color: white;
+}
+h1
+.nowrap {
+  white-space: nowrap ;
+}
+span{
+    margin-left: 160px;
+    font-size: 30px;
+  font-family: "Times New Roman", Times, serif;
+  color:white;
+}
+label{
+margin-left: 160px;
+font-size: 30px;
+}
+input {
+    font-family: "Times New Roman", Times, serif;
+  width: 12%;
+    height: 30px;
+    font-size: 20px;
+
+}
+body {
+  background-color: #444444;
+}
+label
+{
+    color: white;
+}
+h1, h3
+{
+    color:white;
+}
+</style>
+<meta charset="UTF-8">
+<title>Thông tin khách hàng</title>
+</head>
+<body>
+<div id = "lin_grad">
+    <h1 align="center">THÔNG TIN KHÁCH HÀNG</h1><br>
+        <span class="nowrap" >CCCD: </span><span style="margin-left: 0px;" class='nowrap' style="color: black" id="cccd"></span><br><br>
+        <span class="nowrap">Tên: </span><span style="margin-left: 0px;" class="nowrap" style="color: black" id="name"></span><br><br>
+        <span class="nowrap"> Năm sinh: </span><span style="margin-left: 0px;" class="nowrap" style="color: black" id="born"></span><br><br>
+        <span class="nowrap">Giới tính: </span><span style="margin-left: 0px;" class="nowrap" style="color: black" id="gender"></span><br><br>
+
+<form action="/hienthi" method="POST">
+    <label>Số điện thoại: </label>
+  <input type="text" id="std" name="std" pattern="[0-9]+" required minlength="10" maxlength="10"><br><br>
+    <label>Gmail: </label>
+  <input type="text" id="email" name="email"><br>
+
+    <h3 align="center" >Hãy xác nhận thông tin của quý khách trước khi hoàn tất</h3>
+    <div align="center">
+     <input style="font-size:20px" type="submit" value="Submit">
+    </div>
+    <br>
+</form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='chonphong.js') }}"></script>
+ <script type="text/javascript">
+        function preventBack() {
+            window.history.forward();
+        }
+        setTimeout("preventBack()", 0);
+        window.onunload = function () { null };
+    </script>
+<style>
+.button1 {
+color: black;
+border-radius: 8px;
+background-color: green;
+font-size: 20px;
+padding: 100px 100px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+}
+.wrap-flex {
+  display: flex;
+  flex-wrap: nowrap;
+}
+</style>
+</head>
+<body>
+<h1 align="center">QUÝ KHÁCH HÃY CHỌN PHÒNG MONG MUỐN</h1>
+<br>
+<br>
+<br>
+<br>
+<div class="wrap-flex">
+    <div align="center" style="margin-left:200px;" >
+
+            <button class ="button1" id="button1">ROOM1</button><br>
+        <div class="wrap-flex" style="display:none" id="room1">
+            <button onclick="room1_3h()" class = "button1" style="padding: 20px 20px;font-size: 20px;">3h</button>
+            <button onclick="room1_12h()" class = "button1" style="padding: 20px 20px;font-size: 20px;">12h</button>
+            <button onclick="room1_overnight()" class = "button1" style="padding: 20px 20px;font-size: 20px;">Overnight</button>
+            <br>
+
+        </div>
+
+    </div>
+    <div align="center" style="margin-left:600px;">
+        <span >
+            <button class ="button1" id="button2">ROOM2</button><br>
+        </span>
+        <div class="wrap-flex" style="display:none" id="room2">
+            <button onclick="room2_3h()" class = "button1" style="padding: 20px 20px;font-size: 20px;">3h</button>
+            <button onclick="room2_12h()" class = "button1" style="padding: 20px 20px;font-size: 20px;">12h</button>
+            <button onclick="room2_overnight()" class = "button1" style="padding: 20px 20px;font-size: 20px;">Overnight</button>
+
+        </div>
+           <!-- <img src="/static/200.jpg" style="width:500px;height:500px;display:none" alt="Room2" id="room2">-->
+
+    </div>
+</div>
+    <script>
+$(document).ready(function(){
+  $("#button1").click(function(){
+    const button1 = document.getElementById("button1");
+    const room1 = document.getElementById("room1");
+    if (button1.style.backgroundColor != "red"){
+    if (room1.style.display == "none") {
+    room1.style.display = "block";
+  }
+  else {room1.style.display = "none";}
+  }else {
+    room1.style.display = "none";
+  }
+
+  });
+});
+
+$(document).ready(function(){
+  $("#button2").click(function(){
+  const room2 = document.getElementById("room2");
+  const button2 = document.getElementById("button2");
+  if (button2.style.backgroundColor != "red"){
+    if (room2.style.display == "none") {
+    room2.style.display = "block";
+  }
+  else {room2.style.display = "none";}
+  }else {
+    room2.style.display = "none";
+  }
+
+  });
+});
+</script>
+</body>
+</html>

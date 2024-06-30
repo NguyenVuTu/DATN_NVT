@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+<style>
+    img {
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+}
+</style>
+    <title>Thanh toán</title>
+</head>
+<body>
+<h1 align="center">Hãy quét mã QR MOMO sau để thanh toán</h1>
+<br>
+<br>
+<img class="img" src="/static/3h.jpg" style="display:none" id = "room1_3h">
+<img class="img" src="/static/12h.jpg" style="display:none" id = "room1_12h">
+<img class="img" src="/static/24h.jpg" style="display:none" id = "room1_overnight">
+
+
+<h2 align="center">Nếu bạn đã thanh toán hãy nhấn nút ở dưới</h2>
+<div align="center">
+<form action="/phong_cho" method="POST" id="form">
+    <label>Room: </label>
+  <input type="text" id="room" name="room" value="room1"><br>
+    <label>Time(h): </label>
+      <input type="text" id="time" name="time"><br>
+     <input style="font-size:16px" type="submit" value="Submit">
+    </span>
+    <br>
+</form>
+    </div>
+<script>
+function getCurrentURL(){
+  return window.location.href
+}
+const url = getCurrentURL();
+const arr = url.split("/");
+
+var room1_3h = document.getElementById("room1_3h");
+var room1_12h = document.getElementById("room1_12h");
+var room1_overnight = document.getElementById("room1_overnight");
+
+    if (arr[arr.length - 1] == "room1_3h"){
+        room1_3h.style.display = "block";
+        document.getElementById("time").value = "3";
+    }
+    else if( arr[arr.length - 1] == "room1_12h")
+    {
+         document.getElementById("time").value = "12";
+         room1_12h.style.display = "block";
+    }
+    else if( arr[arr.length - 1] == "room1_overnight")
+    {
+         document.getElementById("time").value = "24";
+         room1_overnight.style.display = "block";
+    }
+</script>
+</body>
+</html>

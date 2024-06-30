@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>DETECT FACE</title>
+  </head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='face_detect.js') }}"></script>
+  <style>
+      body{
+	background: black;
+	color: white;
+	padding:1%;
+	text-align: center;
+}
+  </style>
+
+  <body>
+    <h1>Quý khách vui lòng hãy nhìn vào camera trong giây lát</h1>
+   <h3><img src="{{ url_for('video_feed1') }}" width="70%" height="80%"></h3>
+    <hr>
+  </body>
+</html>
